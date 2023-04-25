@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Blog - Poster un article
+{% endblock %}
+
+{% block body %}
+	<main>
+		<h1>Mon blog</h1>
+		<h2>Poster un article</h2>
+
+		
+		<a href="/category/view">Retour ...</a>
+	{{ form_start(form) }}
+            {{ form_errors(form) }}
+
+            {{ form_label(form.category) }}
+            {{ form_widget(form.category) }}
+
+            {{ form_label(form.slug) }}
+            {{ form_widget(form.slug) }}
+
+            {{ form_label(form.title) }}
+            {{ form_widget(form.title) }}
+
+            {# {{ form_label(form.content) }}
+            {{ form_widget(form.content) }} ou #}
+
+            {{ form_row(form.content, { "label": "Votre article:"}) }}
+            
+            <button type="submit" class="input-post">Poster l'article</button>
+
+        {{ form_end(form) }}
+
+	</main>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Blog - Poster un article
+{% endblock %}
+
+{% block body %}
+	<main>
+		<h1>Mon blog</h1>
+		<h2>Créer une nouvelle catégorie</h2>
+
+		<p>La nouvlle catégorie permettra de regouper plusieurs nouvelles articles</p>
+		<a href="/category/list">Retour ...</a>
+		{{ form_start(form) }}
+        {# pour passer le bouton en dessous  #}
+		{{ form_row(form.name)}}
+		<button type="submit" class="input-post">Créer la catégorie</button>
+		{{ form_end(form) }}
+	</main>
+{% endblock %}

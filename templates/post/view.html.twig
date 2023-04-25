@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Blog - {{ post.title }}{% endblock %}
+
+{% block body %}
+      <div class="breadcrumb">
+        <a href="/category/list">Toutes nos catégories</a> >
+        <a href="/category/view/{{ category.name }}">{{ category.name }}</a> > <a href="/post/view/{{ post.slug }}">{{ post.slug }}</a>
+    </div>
+    
+    <h1>{{ category.name }}</h1>
+    <h2>{{ post.title }}</h2>
+
+    <p>{{ post.content }}</p>
+{% endblock %}

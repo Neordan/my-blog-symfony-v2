@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon Blog - Mes catégories{% endblock %}
+
+{% block body %}
+    <h1>Mon blog</h1>
+    <h2>Voici toute nos catégories</h2>
+
+    <p><a href="/category/new">ajouter une nouvelle catégorie</a></p>
+
+    <ul>
+        {% for category in categories %}
+            <li>
+                <a href="/category/view/{{ category.name }}">{{category.name}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+        
+{% endblock %}
